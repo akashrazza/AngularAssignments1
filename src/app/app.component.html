@@ -1,0 +1,530 @@
+Q1<br>
+<h1>Raja Kumar</h1><br><br><br><br>
+
+Q2<br>
+<h1>Raja Kumar</h1><br><br><br><br>
+
+Q3<br>
+Number: {{iNumber}}<br>
+String: {{iString}}<br>
+Object : Username : {{iObject.uid}} Password : {{iObject.pass}}<br><br><br><br>
+
+Q5<br>
+policyNo = {{policy.policyNo}}<br>
+policyHoldersName = {{policy.policyHoldersName}}<br>
+AmountOnMaturity = {{policy.AmountOnMaturity}}<br>
+Nominee Name = {{policy.Nominee}}<br>
+Monthly EMI to be paid = {{policy.Monthly_EMI}}<br>
+duration of the policy = {{policy.duration}}<br><br><br><br>
+
+Q6<br>
+<img [src] = 'image_link'/><br><br><br><br>
+
+Q7<br>
+<input type="button" (click) = "enable_button()" value="Enable button"/>
+<input type="button" (click) = "disable_button()" value="Disable button"/>
+<input type="button" [disabled] = 'is_disable' value="button"/><br><br><br><br>
+
+Q8<br>
+<input type="email" #email placeholder="email"/>
+<button (click) = 'verify_email(email.value)'>Verify Email</button><br><br><br><br>
+
+Q9<br>
+<input type="text" #phone_no placeholder="Phone Number"/>
+<button (click) = 'verify_phone(phone_no.value)'>Verify Phone</button><br><br><br><br>
+
+Q10<br>
+<input type="text" [(ngModel)]='data_binding'>
+{{data_binding}}<br><br><br><br>
+
+Q11<br>
+<input type="text" placeholder="Uid" [(ngModel)] = 'uid'>
+<input type="password" placeholder="Password" [(ngModel)] = 'pass'>
+<button (click) = 'validate_user()'>Login</button><br><br><br><br>
+
+Q12<br><app-child [name] = 'parent_name' [object] = 'iObject'></app-child><br><br><br><br><br>
+
+
+<h1>DAY 2</h1><br><br><br><br>
+
+Q4<br>
+<button [ngClass] = "'btn btn-success'"> Bootstrap Installed</button><br><br><br><br>
+
+Q5<br>
+<button [ngClass] = "['btn btn-success','button-123']"> Bootstrap Installed</button><br><br><br><br>
+
+Q6<br>
+<div class="container" [ngStyle] = "{'padding':'50px 50px 50px 50px','background-color': bdiv_color?'red':'green'}">
+     Q6  Answer
+     <button [ngClass] = "['btn',bdiv_color?'btn-danger':'btn-success']" (click) = 'Change_backgroundColorQ6()'> Change Color</button>
+</div>
+<br><br><br><br>
+
+Q7<br>
+<div class="container">
+    <input type="text" [(ngModel)] = 'Q7textcolor'>
+    <p [ngStyle] = "{'color':Q7textcolor}">Test Text of Q7</p>
+</div>
+<br><br><br><br>
+
+Q8<br>
+<div class="container">
+    <input type="text" [(ngModel)] = 'Q71textcolor'>
+    <input type="text" [(ngModel)] = 'Q71textsize'>
+    <p [ngStyle] = "{'color':Q71textcolor,'font-size':Q71textsize+'px'}">Test Text of Q7</p>
+</div>
+<br><br><br><br>
+
+
+Q9<br><div class="container">
+<input type="text" [(ngModel)] = 'Q8textcolor'>
+<input type="text" [(ngModel)] = 'Q8textsize'>
+<input type="text" [(ngModel)] = 'Q8textbackgroundcolor'>
+<input type="text" [(ngModel)] = 'Q8textalign'>
+<input type="text" [(ngModel)] = 'Q8textweight'>
+<p [ngStyle]="{'color':Q8textcolor,'font-size':Q8textsize+'px','background-color':Q8textbackgroundcolor,'text-align':Q8textalign,'font-weight':Q8textweight}">This is test text</p></div>
+<br><br><br><br>
+
+Q10<br>
+<div class="container">
+    <h2>Login</h2>
+    <input type="text" placeholder="username" [(ngModel)]='Q9username'>
+    <input type="password" placeholder="password" [(ngModel)]='Q9password'>
+    <div *ngIf = "Q9username=='admin' && Q9password=='admin'; else elsepart;" [ngStyle] = "{'color':'green'}">Valid User</div>
+    <ng-template #elsepart ><p [ngStyle] = "{'color':'red'}">Invalid user</p></ng-template>
+</div>
+
+
+Q11 <br><div class="container">
+<div [ngStyle] = "{'background-color':bQ10bkc?'green':'red','color':bQ10c?'white':'black'}">
+    This is test Text
+    
+</div>
+<button (click)= 'Q10event()'>change color</button></div>
+<br><br><br><br>
+
+Q12<br>
+<div class="container">
+<ul>
+    <li *ngFor = "let user of obj">
+        {{user.uid}} - {{user.name}}
+    </li>
+</ul>
+</div>
+
+<br><br><br><br>
+
+Q13<br>
+<div class="container">
+    <table ngClass='table table-bodered table-hover'>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Button</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of obj">
+                <td>{{user.uid}}</td>
+                <td>{{user.name}}</td>
+                <td><input type="button" value="edit"></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br><br><br><br>
+
+Q14<br>
+<div class="container">
+    <table ngClass='table table-bodered table-hover'>
+        <thead>
+            <th>EmpId</th>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Designation</th>
+            <th>Location</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of obj14">
+                <td>{{user.EmpId}}</td>
+                <td>{{user.Name}}</td>
+                <td>{{user.dept}}</td>
+                <td>{{user.designation}}</td>
+                <td>{{user.Location}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<br><br><br><br>
+Q15
+<br>
+
+<div class="container" *ngIf='blastlogin; else elsepartregistration'><a (click)="changeblastlogin()">Registration</a>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>      
+</div>
+
+<ng-template #elsepartregistration>
+    <div class="container"><a (click)="changeblastlogin()">Login</a>
+
+            <form>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                <input type="text" id="form3Example1c" class="form-control" />
+                <label class="form-label" for="form3Example1c">Your Name</label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                <input type="email" id="form3Example3c" class="form-control" />
+                <label class="form-label" for="form3Example3c">Your Email</label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                <input type="password" id="form3Example4c" class="form-control" />
+                <label class="form-label" for="form3Example4c">Password</label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                <input type="password" id="form3Example4cd" class="form-control" />
+                <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                </div>
+            </div>
+
+            <div class="form-check d-flex justify-content-center mb-5">
+                <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form2Example3c"
+                />
+                <label class="form-check-label" for="form2Example3">
+                I agree all statements in <a href="#!">Terms of service</a>
+                </label>
+            </div>
+
+            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                <button type="button" class="btn btn-primary btn-lg">Register</button>
+            </div>
+
+            </form>
+          
+    </div>
+</ng-template>
+
+
+<div class="container-fluid">
+    <h1>Day 3</h1>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q1</h5>
+                  <p>Normal Data : {{D3Q1str}}</p>
+                  <p>Upper Case Data : {{D3Q1str | uppercase}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q2</h5>
+                  <input type="text" [(ngModel)] = 'D3Q2str'>
+                  <p>{{D3Q2str | uppercase}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q3</h5>
+                  <input type="text" [(ngModel)] = 'D3Q3int'>
+                  <p>Indian Currency : {{D3Q3int | currency : 'IND'}}</p>
+                  <p>UK Currency : {{D3Q3int | currency : 'USD'}}</p>
+                  <p>Europe Currency : {{D3Q3int | currency : 'EUR'}}</p>
+                  <p>Russian Currency : {{D3Q3int | currency : 'RUB':'symbol'}}</p>
+                  <p>Ukrainian Currency : {{D3Q3int | currency : 'UAH'}}</p>
+                  <p>Yen Currency : {{D3Q3int | currency : 'YEN'}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q4</h5>
+                  <p>Date in milliseconds :  {{D3Q4date | date}}</p>
+                  <p>Date in Object: {{D3Q1date_obj | date}}</p>
+                  <p>Date in Object with string: {{D3Q1date_str | date}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q5</h5>
+                  <p>Date in short :  {{D3Q5date | date : 'short'}}</p>
+                  <p>Date in medium :  {{D3Q5date | date : 'medium'}}</p>
+                  <p>Date in long :  {{D3Q5date | date : 'long'}}</p>
+                  <p>Date in full :  {{D3Q5date | date : 'full'}}</p>
+                  <p>Date in shortDate :  {{D3Q5date | date : 'shortDate'}}</p>
+                  <p>Date in mediumDate :  {{D3Q5date | date : 'mediumDate'}}</p>
+                  <p>Date in longDate :  {{D3Q5date | date : 'longDate'}}</p>
+                  <p>Date in fullDate :  {{D3Q5date | date : 'fullDate'}}</p>
+                  <p>Time in shortTime :  {{D3Q5date | date : 'shortTime'}}</p>
+                  <p>Time in mediumTime :  {{D3Q5date | date : 'mediumTime'}}</p>
+                  <p>Time in longTime :  {{D3Q5date | date : 'longTime'}}</p>
+                  <p>Time in fullTime :  {{D3Q5date | date : 'fullTime'}}</p>
+
+                </div>
+                
+
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q6</h5>
+                  <p> Object : {{D3Q6obj}}</p>
+                  <p> Object in json : {{D3Q6obj | json}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q7</h5>
+                  <p> Student Object in json : {{D3Q7student | json}}</p>
+                  <p> Insurence Object in json : {{D3Q7insurance | json}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q8</h5>
+                  <p>Decimal Number : {{D3Q6number}}</p>
+                  <p>Decimal Number  upto 3 digit : {{D3Q6number | number : '1.0-2'}}</p>
+                </div>
+                
+
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q9</h5>
+                  <p>Decimal  : {{D3Q6number}}</p>
+                  <p>Decimal Number  upto 0 digit : {{D3Q6number | number : '1.0-0'}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q10</h5>
+                  <p> Percent Number : {{ipercent}}</p>
+                  <p> Percent Number with pipes : {{ipercent | percent : '1.2-3'}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q11</h5>
+                    <p>{{strslicedata}}</p>
+                    <input type="text" [(ngModel)] = 'strslicedata'>
+                    <p>Slice form 2 - 5 : {{strslicedata | slice : 2:5}}</p>
+                    <p>Slice form 2 - -1 : {{strslicedata | slice : 2:-1}}</p>
+                    <p>Slice form 0 - 5 : {{strslicedata | slice : 0:5}}</p>
+                    <p>Slice form 5 : {{strslicedata | slice : 5}}</p>
+                </div>
+                
+
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q12</h5>
+                  String : <input type="text" [(ngModel)] = 'Q12strslicedata'><br>
+                  Starting Index : <input type="text" [(ngModel)] = 'starting_index'><br>
+                  Ending Index : <input type="text" [(ngModel)] = 'end_index'><br>
+                  <p>Slice form {{starting_index}} - {{end_index}} : {{Q12strslicedata | slice : starting_index:end_index}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q13</h5>
+                  String : <input type="text" [(ngModel)] = 'Q12strslicedata'><br>
+                    Starting Index : <input type="text" [(ngModel)] = 'starting_index'><br>
+                    Ending Index : <input type="text" [(ngModel)] = 'end_index'><br>
+                    <p *ngIf = "end_index != 0">Slice form {{starting_index}} - {{end_index}} : {{Q12strslicedata | slice : starting_index:end_index}}</p>
+                    <p *ngIf = "end_index == 0">Slice form {{starting_index}} - {{end_index}} : {{Q12strslicedata | slice : starting_index}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q14</h5>
+                  Celcius Temp : <input type="text" [(ngModel)] = 'itemp'>
+                   To Farenheight {{itemp | customPipe : 'faren' | number : '1.0-3'}}<br>
+                   Farenheight Temp : <input type="text" [(ngModel)] = 'itempfaren'>
+                  To celcius {{itempfaren | customPipe : 'celcius' | number : '1.0-3'}}
+                </div>
+                
+
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q15</h5>
+                    String is  :  <input type="text" [(ngModel)] = 'strcustomuppercase'><br>
+                    After Custom Pipe : {{strcustomuppercase | customUpperCase}}
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-8">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q16</h5>
+                    <h1>User Details</h1>
+                    <span>Search</span><input type="text" [(ngModel)] = 'nameString'>
+                    <br/><br/>
+                    <table class="table table-sm table-striped m-t-4">
+                        <thead class="thead-dark">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Dept</th>
+                            <th>Salary</th>
+                            <th>DOJ</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let user of users | filter:nameString">
+                                <td>{{user.firstName}}</td>
+                                <td>{{user.lastName}}</td>
+                                <td>{{user.dept}}</td>
+                                <td>{{user.salary}}</td>
+                                <td>{{user.doj | date : 'dd/MM/YYY'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-success" (click) = "Adduser()">Add</button>
+                    <button class="btn btn-success" (click) = "Reset()" style="margin-left: 10px;">Reset</button>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card card-1">
+                <div class="card-body">
+                  <h5 class="card-title">Q17</h5>
+                  {{pure_data | purePipe}}
+                  {{Impure_data | imPurePipe}}
+                  
+                </div>
+              </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="container-fluid">
+  <h1>Day 4</h1>
+  <div class="row" style="margin-top: 30px;">
+      <div class="col-4">
+          <div class="card card-1">
+              <div class="card-body">
+                <h5 class="card-title">Q1</h5>
+                <p>Normal Data : {{D3Q1str}}</p>
+                <p>Upper Case Data : {{D3Q1str | uppercase}}</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-4">
+          <div class="card card-1">
+              <div class="card-body">
+                <h5 class="card-title">Q2</h5>
+                <input type="text" [(ngModel)] = 'D3Q2str'>
+                <p>{{D3Q2str | uppercase}}</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-4">
+          <div class="card card-1">
+              <div class="card-body">
+                <h5 class="card-title">Q3</h5>
+                <input type="text" [(ngModel)] = 'D3Q3int'>
+                <p>Indian Currency : {{D3Q3int | currency : 'IND'}}</p>
+                <p>UK Currency : {{D3Q3int | currency : 'USD'}}</p>
+                <p>Europe Currency : {{D3Q3int | currency : 'EUR'}}</p>
+                <p>Russian Currency : {{D3Q3int | currency : 'RUB':'symbol'}}</p>
+                <p>Ukrainian Currency : {{D3Q3int | currency : 'UAH'}}</p>
+                <p>Yen Currency : {{D3Q3int | currency : 'YEN'}}</p>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" *ngFor = "let head of header">{{head}}</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor  = "let user of user_array">
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.city}}</td>
+    </tr>
+    
+  </tbody>
+</table>
+<button (click)="adddata()">ADD</button>
+<input type="text" [(ngModel)]='id_user'>
+<button (click)="delete()">Delete</button>
+<button></button>

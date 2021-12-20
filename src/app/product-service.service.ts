@@ -17,7 +17,7 @@ export class ProductServiceService {
     this.product_array.push(product);
   }
   deleteProduct(id:number){
-    var index:number;
+    var index!:number;
     for (let i in this.product_array){
       if(this.product_array[i].id==id){
         index=parseInt(i);
